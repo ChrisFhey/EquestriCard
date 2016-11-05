@@ -17,4 +17,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SeriesSelectActivity.class);
         startActivity(intent);
     }
+
+    public void openDeckList(View view) {
+        Intent intent = new Intent(this, DeckListActivity.class);
+        startActivity(intent);
+    }
 }
