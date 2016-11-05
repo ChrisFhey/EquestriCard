@@ -16,8 +16,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".SeriesSelectActivity" />
-        <activity android:name=".SeriesOverviewActivity"></activity>
+        <activity android:name=".SeriesOverviewActivity" />
+        <activity
+            android:name=".DeckListActivity"
+            android:label="@string/title_activity_deck_list"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fhey.equestricard.HomeActivity" />
+        </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
