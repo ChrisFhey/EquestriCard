@@ -30,7 +30,7 @@ import java.util.List;
  *
  * Created by Fhey on 2016-11-03.
  */
-public class SeriesOverviewActivity extends Activity implements GetCardOverviewBySet.AsyncResponse {
+public class SeriesOverviewActivity extends Activity implements AsyncResponse {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,14 @@ public class SeriesOverviewActivity extends Activity implements GetCardOverviewB
                 public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
                     try {
                         JSONObject listItem = (JSONObject) list.getItemAtPosition(pos);
+                        String fullName = listItem.getString("fullname");
                         String cardVersionGuid = listItem.getString("card_version_guid");
+
+                        Intent intent = new Intent(SeriesOverviewActivity.this, CardDetailActivity.class);
+                        intent.putExtra("fullName", fullName);
+                        intent.putExtra("cardVersionGuid", cardVersionGuid);
+
+                        startActivity(intent);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -120,13 +127,6 @@ class GetCardOverviewBySet extends AsyncTask<String, Void, String> {
     private AsyncResponse delegate = null;
     private ProgressDialog dialog;
     private Context context;
-
-    /**
-     * AsyncResponse interface
-     */
-    interface AsyncResponse {
-        void processFinish(String output);
-    }
 
     /**
      * GetCardOverviewBySet Constructor.
