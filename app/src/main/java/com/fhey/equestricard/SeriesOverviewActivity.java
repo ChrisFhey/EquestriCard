@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -63,20 +65,28 @@ public class SeriesOverviewActivity extends Activity implements GetCardOverviewB
             JSONArray data = jsonObject.getJSONArray("data");
 
             JSONArray sortedData = getSortedList(data);
-
-            ListView list = (ListView) SeriesOverviewActivity.this.findViewById(R.id.lst_Cards);
-
-            List<String> cardList = new ArrayList<>();
+            JSONObject[] jsonObjects = new JSONObject[sortedData.length()];
+            final ListView list = (ListView) SeriesOverviewActivity.this.findViewById(R.id.lst_Cards);
 
             for (int i = 0; i < sortedData.length(); i++) {
-                TableRow row = new TableRow(this);
                 JSONObject o = new JSONObject(sortedData.getString(i));
-
-                cardList.add(o.getString("fullname"));
+                jsonObjects[i] = o;
             }
 
-            ArrayAdapter<String> cardAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,cardList);
+            CardListAdapter cardAdapter = new CardListAdapter(this, R.layout.card_list_row, jsonObjects);
             list.setAdapter(cardAdapter);
+
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
+                    try {
+                        JSONObject listItem = (JSONObject) list.getItemAtPosition(pos);
+                        String cardVersionGuid = listItem.getString("card_version_guid");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
         }
         catch (Exception e) {
