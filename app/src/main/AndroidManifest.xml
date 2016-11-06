@@ -28,6 +28,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fhey.equestricard.HomeActivity" />
         </activity>
+        <activity
+            android:name=".CardDetailActivity"
+            android:label="@string/title_activity_card_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
