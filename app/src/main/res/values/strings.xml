@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">EquestriCard</string>
     <string name="title_activity_deck_list">DeckListActivity</string>
+    <string name="title_activity_card_detail">CardDetailActivity</string>
 </resources>
