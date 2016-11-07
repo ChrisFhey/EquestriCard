@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_pr"
             android:onClick="seriesOverview"
-            android:tag="PR"/>
+            android:tag="PR"
+            android:backgroundTint="@color/colorPrimary" />
     </LinearLayout>
 </RelativeLayout>
