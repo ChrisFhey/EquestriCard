@@ -2,4 +2,7 @@
     <string name="app_name">EquestriCard</string>
     <string name="title_activity_deck_list">DeckListActivity</string>
     <string name="title_activity_card_detail">CardDetailActivity</string>
+    <string name="test_gametext"><b>Home Limit 3</b>\nWhen you confront this card\'s Problem, if you have a Troublemaker at that Problem, turn this card over</string>
+    <string name="test_flavourtext"><i>Stupendous? Astonishing? Breathtaking?</i></string>
+    <string name="test_rulings">When a player confronts a Problem with this card, their Troublemaker needs to be face-up in order to flip this card to its Boosted side. (Comprehensive Rules 505.2)</string>
 </resources>

@@ -1,21 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_card_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.fhey.equestricard.CardDetailActivity"
     tools:showIn="@layout/activity_card_detail">
 
-    <TextView
-        android:id="@+id/txt_GUID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
-</RelativeLayout>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Top image with text-->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/topImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                card_view:cardElevation="2dp"
+                card_view:cardCornerRadius="0dp"
+                card_view:cardBackgroundColor="?attr/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginLeft="126dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:foregroundGravity="bottom|center">
+                    <TextView
+                        android:id="@+id/txt_cardTitle"
+                        android:text="Rainbow Dash"
+                        android:layout_width="match_parent"
+                        android:paddingTop="8dp"
+                        android:layout_height="30dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        />
+                    <TextView
+                        android:id="@+id/txt_cardSubtitle"
+                        android:text="Flier Extraordinaire"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        />
+                    <TextView
+                        android:id="@+id/txt_series_rarity"
+                        android:text="Premiere #1 (F)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Small card image -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view2="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardImage"
+                android:layout_width="102dp"
+                android:layout_height="142dp"
+                android:layout_marginTop="92dp"
+                android:layout_marginLeft="16dp"
+                card_view2:cardElevation="2dp"
+                android:backgroundTint="@android:color/black">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/premiere_001"
+                    android:layout_gravity="center"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="126dp"
+                        android:layout_marginTop="150dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="22dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_type"
+                                    android:text="Mane character"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.8"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                                <TextView
+                                    android:id="@+id/txt_trait"
+                                    android:text="Pegasus"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:text="Power"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.1"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="Required"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.1"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="Cost"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:text="1"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:background="@android:color/holo_blue_bright"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.1"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="/"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:background="@android:color/holo_blue_bright"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.1"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="/"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:background="?attr/colorButtonNormal"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:paddingBottom="12dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_bottom"
+                        >
+                        <TextView
+                            android:text="@string/test_gametext"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"/>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"/>
+                        <TextView
+                            android:text="@string/test_flavourtext"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_bottom"
+                        >
+                        <TextView
+                            android:text="@string/test_rulings"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </FrameLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/cardImageExpanded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        android:src="@drawable/premiere_001" />
+</FrameLayout>

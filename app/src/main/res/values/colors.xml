@@ -4,5 +4,5 @@
     <color name="colorPrimaryDark">#26a4f7</color>
     <color name="colorAccent">#e6468c</color>
     <color name="MLP_dark">#7a52a2</color>
-    <color name="windowBackgroundColour">#e6e6e6</color>
+    <color name="windowBackgroundColour">#ececec</color>
 </resources>
