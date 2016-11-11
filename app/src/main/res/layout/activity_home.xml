@@ -8,7 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="12dp"
     tools:context="com.fhey.equestricard.HomeActivity">
 
     <ScrollView
@@ -23,7 +23,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingBottom="4dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
                 android:clipToPadding="false"
                 >
                 <android.support.v7.widget.CardView
@@ -39,7 +40,7 @@
 
                     <ImageView
                         android:layout_height="199dp"
-                        app:srcCompat="@color/colorAccent"
+                        android:src="@drawable/rd_tin"
                         android:id="@+id/img_cardOverview"
                         android:layout_width="match_parent" />
                     <RelativeLayout
@@ -84,8 +85,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="173dp"
                         android:id="@+id/img_Collection"
-                        android:src="@drawable/cards"
-                        android:background="@color/colorAccent" />
+                        android:src="@drawable/pp_box"
+                        />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -119,8 +120,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="173dp"
-                        app:srcCompat="@color/colorAccent"
-                        android:id="@+id/img_DeckBuilder" />
+                        android:id="@+id/img_DeckBuilder"
+                        card_view:srcCompat="@drawable/deckbox" />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

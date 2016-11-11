@@ -23,6 +23,79 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_pr"
             android:onClick="seriesOverview"
-            android:tag="PR"/>
+            android:tag="PR"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="Canterlot Nights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cn"
+            android:onClick="seriesOverview"
+            android:tag="CN"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="Rock N Rave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_rr"
+            android:onClick="seriesOverview"
+            android:tag="RR"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="Celestial Solstice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cs"
+            android:onClick="seriesOverview"
+            android:tag="CS"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="The Crystal Games"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cg"
+            android:onClick="seriesOverview"
+            android:tag="CG"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="Absolute Discord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_ad"
+            android:onClick="seriesOverview"
+            android:tag="AD"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="Equestrian Odysseys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_eo"
+            android:onClick="seriesOverview"
+            android:tag="EO"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="High Magic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_hm"
+            android:onClick="seriesOverview"
+            android:tag="HM"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:text="Marks in Time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_mt"
+            android:onClick="seriesOverview"
+            android:tag="MT"
+            android:backgroundTint="@color/colorPrimary" />
     </LinearLayout>
 </RelativeLayout>
